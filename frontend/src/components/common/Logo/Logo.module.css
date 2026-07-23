@@ -1,0 +1,67 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.image {
+  object-fit: contain;
+  border-radius: var(--radius-circle); 
+}
+
+.text {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.5px;
+}
+
+/* Theme Dark (Default) */
+.theme-dark .text {
+  color: var(--color-text-primary);
+}
+
+.theme-dark .textHighlight {
+  color: var(--color-primary);
+}
+
+/* Theme Light */
+.theme-light .text {
+  color: white;
+}
+
+.theme-light .textHighlight {
+  color: white;
+}
+
+/* Sizes */
+.size-sm .image {
+  width: 24px;
+  height: 24px;
+}
+.size-sm .text {
+  font-size: var(--font-size-body);
+}
+
+.size-md .image {
+  width: 36px;
+  height: 36px;
+}
+.size-md .text {
+  font-size: var(--font-size-title);
+}
+
+.size-lg .image {
+  width: 48px;
+  height: 48px;
+}
+.size-lg .text {
+  font-size: var(--font-size-h3);
+}
+
+.size-xl .image {
+  width: 64px;
+  height: 64px;
+}
+.size-xl .text {
+  font-size: var(--font-size-h2);
+}

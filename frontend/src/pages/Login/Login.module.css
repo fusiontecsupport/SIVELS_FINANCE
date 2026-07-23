@@ -1,0 +1,64 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  margin-top: calc(var(--spacing-xs) * -1); /* Pull up slightly closer to input */
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  margin-right: var(--spacing-sm);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+.checkboxLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.forgotPassword {
+  font-size: var(--font-size-small);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgotPassword:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.submitButton {
+  margin-bottom: var(--spacing-md);
+}
+
+.newUserButton {
+  margin-bottom: var(--spacing-xl);
+}
+
+.apiError {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-small);
+  text-align: center;
+}
