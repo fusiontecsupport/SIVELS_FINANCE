@@ -26,3 +26,7 @@ obj/
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Visual Studio User Files
+*.user
+*.suo
