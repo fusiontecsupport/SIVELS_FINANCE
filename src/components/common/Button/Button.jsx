@@ -1,33 +1,32 @@
-import React from 'react';
-import styles from './Button.module.css';
+import './Button.css';
+import { Loader2 } from 'lucide-react';
 
 const Button = ({ 
   children, 
-  onClick, 
-  type = 'button', 
   variant = 'primary', 
-  size = 'md', 
-  fullWidth = false, 
+  type = 'button', 
   disabled = false, 
+  loading = false, 
+  onClick, 
   className = '',
-  ...props 
+  icon: Icon
 }) => {
-  const baseClass = styles.button;
-  const variantClass = styles[`variant-${variant}`];
-  const sizeClass = styles[`size-${size}`];
-  const fullWidthClass = fullWidth ? styles.fullWidth : '';
-
-  const combinedClasses = `${baseClass} ${variantClass} ${sizeClass} ${fullWidthClass} ${className}`.trim();
-
+  const baseClass = `btn btn-${variant} ${className}`;
+  
   return (
-    <button
-      type={type}
-      className={combinedClasses}
+    <button 
+      type={type} 
+      className={baseClass} 
+      disabled={disabled || loading} 
       onClick={onClick}
-      disabled={disabled}
-      {...props}
     >
-      {children}
+      {loading ? (
+        <Loader2 className="btn-icon spin" size={20} />
+      ) : Icon ? (
+        <Icon className="btn-icon" size={20} />
+      ) : null}
+      
+      <span className="btn-text">{children}</span>
     </button>
   );
 };

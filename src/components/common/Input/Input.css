@@ -1,0 +1,80 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.required-asterisk {
+  color: #EF4444; /* Red color for required */
+  margin-left: 0.1rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-card);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-container:focus-within {
+  border-color: var(--border-focus);
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.input-error {
+  border-color: var(--error);
+}
+
+.input-error:focus-within {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text-main);
+  font-size: 0.9375rem;
+}
+
+.input-field.with-icon {
+  padding-left: 3rem;
+}
+
+.input-field::placeholder {
+  color: var(--text-light);
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: var(--error);
+  margin-top: 0.2rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}

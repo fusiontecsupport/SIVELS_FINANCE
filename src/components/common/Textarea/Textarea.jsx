@@ -1,12 +1,11 @@
-import './Input.css';
+import './Textarea.css';
 import { forwardRef } from 'react';
 
-const Input = forwardRef(({
+const Textarea = forwardRef(({
   label,
   error,
-  icon: Icon,
-  type = 'text',
   className = '',
+  rows = 3,
   required = false,
   ...props
 }, ref) => {
@@ -17,12 +16,11 @@ const Input = forwardRef(({
           {label} {required && <span className="required-asterisk">*</span>}
         </label>
       )}
-      <div className={`input-container ${error ? 'input-error' : ''}`}>
-        {Icon && <div className="input-icon"><Icon size={20} /></div>}
-        <input 
+      <div className={`input-container textarea-container ${error ? 'error' : ''}`}>
+        <textarea
           ref={ref}
-          type={type}
-          className={`input-field ${Icon ? 'with-icon' : ''}`}
+          className="input-field textarea-field"
+          rows={rows}
           required={required}
           {...props}
         />
@@ -32,6 +30,6 @@ const Input = forwardRef(({
   );
 });
 
-Input.displayName = 'Input';
+Textarea.displayName = 'Textarea';
 
-export default Input;
+export default Textarea;

@@ -1,0 +1,10 @@
+.textarea-container {
+  height: auto;
+  padding: 0;
+}
+
+.textarea-field {
+  padding: 0.6rem 1rem;
+  resize: vertical;
+  min-height: 80px;
+}

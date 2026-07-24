@@ -1,11 +1,8 @@
-import React from 'react';
-import styles from './Card.module.css';
+import './Card.css';
 
-const Card = ({ children, className = '', padding = 'md' }) => {
-  const cardClass = `${styles.card} ${styles[`padding-${padding}`]} ${className}`.trim();
-  
+const Card = ({ children, className = '', padding = 'normal' }) => {
   return (
-    <div className={cardClass}>
+    <div className={`card padding-${padding} ${className}`}>
       {children}
     </div>
   );

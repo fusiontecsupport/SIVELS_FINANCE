@@ -1,0 +1,92 @@
+.registration-stepper-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.registration-stepper {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.registration-stepper-line {
+  position: absolute;
+  top: 16px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  border-top: 1px dashed #cbd5e1;
+  z-index: 1;
+}
+
+.registration-step-wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+  justify-content: center;
+}
+
+.registration-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+  width: 60px;
+}
+
+.reg-step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #F8FAFC; /* Dashboard background color so line doesn't show through */
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  z-index: 2;
+}
+
+.reg-step-circle.active {
+  background: linear-gradient(135deg, #4F46E5 0%, #3B82F6 100%);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+}
+
+.reg-step-circle.completed {
+  background: var(--accent-success);
+  border-color: var(--accent-success);
+  color: white;
+}
+
+.reg-step-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  background-color: #F8FAFC; /* Ensure text background matches to avoid line collision */
+}
+
+.reg-step-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.reg-step-text {
+  font-size: 0.75rem;
+  color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.2;
+}
